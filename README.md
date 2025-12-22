@@ -52,6 +52,7 @@ Concepts Used: INNER JOIN
 Explanation:
 This query joins the bookings, users, and vehicles tables to display booking details along with the customer name and vehicle name.
 
+```
 
 Query 2: Find all vehicles that have never been booked
 SELECT
