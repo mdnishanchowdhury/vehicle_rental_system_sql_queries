@@ -48,7 +48,7 @@ from
   inner join vehicles as v on b.vehicle_id = v.vehicle_id;
 ````
 
-Concepts Used: INNER JOIN
+**Concepts Used:** INNER JOIN
 ### Explanation:
 This query joins the bookings, users, and vehicles tables to display booking details along with the customer name and vehicle name.
 
@@ -69,7 +69,7 @@ where
       b.vehicle_id = v.vehicle_id
   );
 ```
-Concepts Used: NOT EXISTS
+**Concepts Used:** NOT EXISTS
 ### Explanation:
 This query finds all vehicles that do not have any bookings using a NOT EXISTS subquery.
 
@@ -83,7 +83,7 @@ where
   type = 'bike'
   and status = 'available';
 ```
-Concepts Used: SELECT, WHERE
+**Concepts Used:** SELECT, WHERE
 ### Explanation:
 This query filters the vehicles table to display only vehicles of type "bike" that are currently available for rent.
 
@@ -103,7 +103,7 @@ having
   count(b.booking_id) > 2;
 ```
 
-Concepts Used: GROUP BY, HAVING, COUNT
+**Concepts Used:** GROUP BY, HAVING, COUNT
 ### Explanation:
 This query counts the total bookings for each vehicle and displays only vehicles that have been booked more than twice.
 
