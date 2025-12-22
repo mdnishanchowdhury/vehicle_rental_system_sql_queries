@@ -23,6 +23,16 @@ It demonstrates the use of **SQL queries**, relational database concepts, and **
    - `start_date`, `end_date`, `total_cost`, `status`  
 
 ---
+### ERD (Entity-Relationship Diagram)
+
+One-to-Many: Users → Bookings
+
+Many-to-One: Bookings → Vehicles
+
+One-to-One (logical): Each booking connects exactly one user and one vehicle
+
+**ERD Link (Public):** https://drawsql.app/teams/personal-4113/diagrams/vehicle-rental-system
+
 
 ## SQL Queries & Solutions
 
@@ -101,12 +111,3 @@ having
 ### Explanation:
 This query counts the total bookings for each vehicle and displays only vehicles that have been booked more than twice.
 
-### ERD (Entity-Relationship Diagram)
-
-One-to-Many: Users → Bookings
-
-Many-to-One: Bookings → Vehicles
-
-One-to-One (logical): Each booking connects exactly one user and one vehicle
-
-**ERD Link (Public):** https://drawsql.app/teams/personal-4113/diagrams/vehicle-rental-system
