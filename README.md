@@ -34,18 +34,18 @@ It demonstrates the use of **SQL queries**, relational database concepts, and **
 
 ### Query 1: Retrieve booking information with customer and vehicle details
 ```bash
-SELECT
+select
   b.booking_id,
-  u.name AS customer_name,
-  v.name AS vehicle_name,
+  u.name as customer_name,
+  v.name as vehicle_name,
   b.start_date,
   b.end_date,
   b.total_cost,
   b.status
-FROM
-  bookings AS b
-  INNER JOIN users AS u ON b.user_id = u.user_id
-  INNER JOIN vehicles AS v ON b.vehicle_id = v.vehicle_id;
+from
+  bookings as b
+  inner join users as u on b.user_id = u.user_id
+  inner join vehicles as v on b.vehicle_id = v.vehicle_id;
 ````
 
 Concepts Used: INNER JOIN
@@ -55,17 +55,19 @@ This query joins the bookings, users, and vehicles tables to display booking det
 
 ### Query 2: Find all vehicles that have never been booked
 ```bash
-SELECT
+select
   *
-FROM
-  vehicles AS v
-WHERE
-  NOT EXISTS (
-    SELECT 1
-    FROM bookings AS b
-    WHERE b.vehicle_id = v.vehicle_id
+from
+  vehicles as v
+where
+  not exists (
+    select
+      1
+    from
+      bookings as b
+    where
+      b.vehicle_id = v.vehicle_id
   );
-
 ```
 Concepts Used: NOT EXISTS
 Explanation:
@@ -73,14 +75,13 @@ This query finds all vehicles that do not have any bookings using a NOT EXISTS s
 
 ### Query 3: Retrieve all available vehicles of a specific type
 ```bash
-SELECT
+select
   *
-FROM
+from
   vehicles
-WHERE
+where
   type = 'bike'
-  AND status = 'available';
-
+  and status = 'available';
 ```
 Concepts Used: SELECT, WHERE
 Explanation:
@@ -88,18 +89,18 @@ This query filters the vehicles table to display only vehicles of type "bike" th
 
 ### Query 4: Find vehicles with more than 2 bookings
 ```bash
-SELECT
+select
   v.vehicle_id,
-  v.name AS vehicle_name,
-  COUNT(b.booking_id) AS total_bookings
-FROM
-  vehicles AS v
-  INNER JOIN bookings AS b ON v.vehicle_id = b.vehicle_id
-GROUP BY
+  v.name as vehicle_name,
+  count(b.booking_id) as total_bookings
+from
+  vehicles as v
+  inner join bookings as b on v.vehicle_id = b.vehicle_id
+group by
   v.vehicle_id,
   v.name
-HAVING
-  COUNT(b.booking_id) > 2;
+having
+  count(b.booking_id) > 2;
 ```
 
 Concepts Used: GROUP BY, HAVING, COUNT
