@@ -33,7 +33,7 @@ It demonstrates the use of **SQL queries**, relational database concepts, and **
 ## SQL Queries & Solutions
 
 ### Query 1: Retrieve booking information with customer and vehicle details
-```sql
+```bash
 SELECT
   b.booking_id,
   u.name AS customer_name,
@@ -46,15 +46,15 @@ FROM
   bookings AS b
   INNER JOIN users AS u ON b.user_id = u.user_id
   INNER JOIN vehicles AS v ON b.vehicle_id = v.vehicle_id;
-
+````
 
 Concepts Used: INNER JOIN
 Explanation:
 This query joins the bookings, users, and vehicles tables to display booking details along with the customer name and vehicle name.
 
-```
 
 Query 2: Find all vehicles that have never been booked
+```bash
 SELECT
   *
 FROM
@@ -66,12 +66,13 @@ WHERE
     WHERE b.vehicle_id = v.vehicle_id
   );
 
-
+```
 Concepts Used: NOT EXISTS
 Explanation:
 This query finds all vehicles that do not have any bookings using a NOT EXISTS subquery.
 
 Query 3: Retrieve all available vehicles of a specific type
+```bash
 SELECT
   *
 FROM
@@ -80,12 +81,13 @@ WHERE
   type = 'bike'
   AND status = 'available';
 
-
+```
 Concepts Used: SELECT, WHERE
 Explanation:
 This query filters the vehicles table to display only vehicles of type "bike" that are currently available for rent.
 
 Query 4: Find vehicles with more than 2 bookings
+```bash
 SELECT
   v.vehicle_id,
   v.name AS vehicle_name,
@@ -98,7 +100,7 @@ GROUP BY
   v.name
 HAVING
   COUNT(b.booking_id) > 2;
-
+```
 
 Concepts Used: GROUP BY, HAVING, COUNT
 Explanation:
