@@ -109,4 +109,4 @@ Many-to-One: Bookings → Vehicles
 
 One-to-One (logical): Each booking connects exactly one user and one vehicle
 
-ERD Link: [https://drawsql.app/teams/personal-4113/diagrams/vehicle-rental-system]
+**ERD Link (Public):** https://drawsql.app/teams/personal-4113/diagrams/vehicle-rental-system
