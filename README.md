@@ -10,19 +10,24 @@ It demonstrates the use of **SQL queries**, relational database concepts, and **
 
 1. **Users** – Stores customer and admin information:
    - `user_id` (Primary Key)  
-   - `name`, `email`, `password` ,`phone`, `role` 
+   - `name`, `email`, `password`, `phone`  
+   - `role`: `Admin`, `Customer`
 
 2. **Vehicles** – Stores details of vehicles available for rent:
    - `vehicle_id` (Primary Key)  
-   - `name`, `type`, `model`,`registration_number`, `rental_price`, `status`  
+   - `name`, `model`, `registration_number`, `rental_price`  
+   - `type`: `car`, `bike`, `truck`  
+   - `status`: `available`, `rented`, `maintenance`
 
 3. **Bookings** – Stores booking information linking users and vehicles:
    - `booking_id` (Primary Key)  
    - `user_id` (Foreign Key → Users)  
    - `vehicle_id` (Foreign Key → Vehicles)  
-   - `start_date`, `end_date`, `total_cost`, `status`  
+   - `start_date`, `end_date`, `total_cost`  
+   - `status`: `pending`, `confirmed`, `completed`, `cancelled`
 
 ---
+
 ### ERD (Entity-Relationship Diagram)
 
 One-to-Many: Users → Bookings
