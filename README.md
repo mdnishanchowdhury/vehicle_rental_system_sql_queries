@@ -49,7 +49,7 @@ from
 ````
 
 Concepts Used: INNER JOIN
-Explanation:
+### Explanation:
 This query joins the bookings, users, and vehicles tables to display booking details along with the customer name and vehicle name.
 
 
@@ -70,7 +70,7 @@ where
   );
 ```
 Concepts Used: NOT EXISTS
-Explanation:
+### Explanation:
 This query finds all vehicles that do not have any bookings using a NOT EXISTS subquery.
 
 ### Query 3: Retrieve all available vehicles of a specific type
@@ -84,7 +84,7 @@ where
   and status = 'available';
 ```
 Concepts Used: SELECT, WHERE
-Explanation:
+### Explanation:
 This query filters the vehicles table to display only vehicles of type "bike" that are currently available for rent.
 
 ### Query 4: Find vehicles with more than 2 bookings
@@ -104,7 +104,7 @@ having
 ```
 
 Concepts Used: GROUP BY, HAVING, COUNT
-Explanation:
+### Explanation:
 This query counts the total bookings for each vehicle and displays only vehicles that have been booked more than twice.
 
 ### ERD (Entity-Relationship Diagram)
