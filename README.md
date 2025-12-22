@@ -4,23 +4,17 @@
 This project is a simplified **Vehicle Rental System** database designed to manage **users**, **vehicles**, and **bookings** efficiently.  
 It demonstrates the use of **SQL queries**, relational database concepts, and **ERD design** to represent relationships between tables.
 
-### Project Objectives
-- Design and implement a relational database for a vehicle rental system.  
-- Create SQL queries to manage and retrieve data efficiently.  
-- Represent database structure using an **ERD**.  
-- Prepare professional documentation for submission.
-
 ---
 
 ## Database Tables
 
 1. **Users** – Stores customer and admin information:
    - `user_id` (Primary Key)  
-   - `name`, `email`, `phone`, `role`, `password`  
+   - `name`, `email`, `password` ,`phone`, `role` 
 
 2. **Vehicles** – Stores details of vehicles available for rent:
    - `vehicle_id` (Primary Key)  
-   - `name`, `type`, `registration_number`, `rental_price`, `status`  
+   - `name`, `type`, `model`,`registration_number`, `rental_price`, `status`  
 
 3. **Bookings** – Stores booking information linking users and vehicles:
    - `booking_id` (Primary Key)  
@@ -115,4 +109,4 @@ Many-to-One: Bookings → Vehicles
 
 One-to-One (logical): Each booking connects exactly one user and one vehicle
 
-ERD Link: [Your Lucidchart or ERD Tool Public Link]
+ERD Link: [https://drawsql.app/teams/personal-4113/diagrams/vehicle-rental-system]
