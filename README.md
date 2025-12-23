@@ -11,20 +11,20 @@ It demonstrates the use of **SQL queries**, relational database concepts, and **
 1. **Users** – Stores customer and admin information:
    - `user_id` (Primary Key)  
    - `name`, `email`, `password`, `phone`  
-   - `role`: `Admin`, `Customer`
+   - `role`: (`Admin`, `Customer`)
 
 2. **Vehicles** – Stores details of vehicles available for rent:
    - `vehicle_id` (Primary Key)  
    - `name`, `model`, `registration_number`, `rental_price`  
-   - `type`: `car`, `bike`, `truck`  
-   - `status`: `available`, `rented`, `maintenance`
+   - `type`: (`car`, `bike`, `truck`)  
+   - `status`: (`available`, `rented`, `maintenance`)
 
 3. **Bookings** – Stores booking information linking users and vehicles:
    - `booking_id` (Primary Key)  
    - `user_id` (Foreign Key → Users)  
    - `vehicle_id` (Foreign Key → Vehicles)  
    - `start_date`, `end_date`, `total_cost`  
-   - `status`: `pending`, `confirmed`, `completed`, `cancelled`
+   - `status`: (`pending`, `confirmed`, `completed`, `cancelled`)
 
 ---
 
